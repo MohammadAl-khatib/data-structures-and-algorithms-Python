@@ -71,7 +71,15 @@ def test_insert_after_last(ll):
     actual = ll.__str__()
     assert expected == actual
 
+def test_insert_before_value_not_in_list(ll):
+    expected = '6 is not on the linked list'
+    actual = ll.insert_before(6,'any value')
+    assert expected == actual
 
+def test_insert_after_value_not_in_list(ll):
+    expected = '8 is not on the linked list'
+    actual = ll.insert_after(8,'any value')
+    assert expected == actual
 
 
 @pytest.fixture

@@ -52,7 +52,7 @@ class LinkedList:
                     break
                 current = current.next
         if current.next == None:
-                print (f"{value} is not on the linked list")
+                return f"{value} is not on the linked list"
 
     def insert_after(self,value,new_value):
         current = self.head
@@ -64,7 +64,7 @@ class LinkedList:
                 break
             current = current.next
         if current == None:
-                return (f"{value} is not on the linked list")
+            return f"{value} is not on the linked list"
         
 
 if __name__ == '__main__':
@@ -80,4 +80,4 @@ if __name__ == '__main__':
     # ll.insert_after(3,'after last')
     # ll.insert_before(6,'value')
     # ll.insert_after(6,'value')
-    print(ll)
+    print(ll.insert_after(6,'value'))
