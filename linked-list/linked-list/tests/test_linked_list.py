@@ -47,6 +47,33 @@ def test_return_all_linked_list(ll):
     actual = ll.__str__()
     assert expected == actual
 
+def test_insert_before_first(ll):
+    ll.insert_before(1,'before first')
+    expected = '{before first} -> {1} -> {2} -> {3} -> None'
+    actual = ll.__str__()
+    assert expected == actual
+
+def test_insert_before_mid(ll):
+    ll.insert_before(3,'before mid')
+    expected = '{1} -> {2} -> {before mid} -> {3} -> None'
+    actual = ll.__str__()
+    assert expected == actual
+
+def test_insert_after_mid(ll):
+    ll.insert_after(3,"after mid")
+    expected = '{1} -> {2} -> {3} -> {after mid} -> None'
+    actual = ll.__str__()
+    assert expected == actual
+
+def test_insert_after_last(ll):
+    ll.insert_after(3,"after last")
+    expected = '{1} -> {2} -> {3} -> {after last} -> None'
+    actual = ll.__str__()
+    assert expected == actual
+
+
+
+
 @pytest.fixture
 def ll():
     ll=LinkedList()

@@ -11,3 +11,15 @@ For adding to a linked list, loops were used (without nesting), this results in 
 
 ## API
 No APIs till now
+
+# Challenge Summary
+Insert before and after a node in a linked list
+
+## Whiteboard Process
+N/A
+
+## Approach & Efficiency
+Loops without nesting were used, resulted in a O(n) Big O
+
+## Solution
+Use Pytest on your CLI to see results
