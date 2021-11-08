@@ -12,7 +12,8 @@ For adding to a linked list, loops were used (without nesting), this results in 
 ## API
 No APIs till now
 
-# Challenge Summary
+
+# Challenge Summary 06
 Insert before and after a node in a linked list
 
 ## Whiteboard Process
@@ -23,3 +24,17 @@ Loops without nesting were used, resulted in a O(n) Big O
 
 ## Solution
 Use Pytest on your CLI to see results
+
+# Challenge Summary 07
+Find the value for element according to its index from the end
+
+## Whiteboard Process
+[white board link](https://webwhiteboard.com/board/neNFHaVZdrACDsJiemaCqMtlFOxmzi3C/)
+
+![white board](linked_list/assets/challenge07.png)
+
+## Approach & Efficiency
+Loop was used without nesting ->  o(n) Big O
+
+## Solution
+Tests are embded within repo

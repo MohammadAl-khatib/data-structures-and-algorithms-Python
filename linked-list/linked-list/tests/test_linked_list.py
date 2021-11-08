@@ -81,7 +81,33 @@ def test_insert_after_value_not_in_list(ll):
     actual = ll.insert_after(8,'any value')
     assert expected == actual
 
+def test_index_from_end_bigger_than_length(ll):
+    expected = 'index not valid'
+    actual = ll.index_from_end(4)
+    assert expected == actual 
 
+def test_index_from_end_equal_to_length(ll):
+    expected = 'index not valid'
+    actual = ll.index_from_end(3)
+    assert expected == actual 
+
+def test_index_from_end_negative(ll):
+    expected = 1
+    actual = ll.index_from_end(-1)
+    assert expected == actual 
+
+def test_index_from_end_middle1(ll):
+    expected = 2
+    actual = ll.index_from_end(1)
+    assert expected == actual 
+
+def test_index_from_end_single_value_ll():
+    ll = LinkedList()
+    ll.insert(1)
+    expected = 1
+    actual = ll.index_from_end(0)
+    assert expected == actual 
+    
 @pytest.fixture
 def ll():
     ll=LinkedList()
