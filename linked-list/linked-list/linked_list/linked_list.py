@@ -66,18 +66,22 @@ class LinkedList:
         if current == None:
             return f"{value} is not on the linked list"
         
+    def index_from_end(self,k):
+        try:
+            current = self.head
+            array_linked_list = []
+            while current :
+                array_linked_list.append(current.value)
+                current = current.next
+            return array_linked_list[-(k+1)]
+        except IndexError:
+            return ('index not valid')
 
 if __name__ == '__main__':
     ll=LinkedList()
     ll.insert(1)
     ll.insert(2)
     ll.insert(3)
-    # ll.insert(4)
-    # ll.insert(5)
-    # ll.insert_before(1,'before first')
-    # ll.insert_before(3,'before mid')
-    # ll.insert_after(3,"after mid")
-    # ll.insert_after(3,'after last')
-    # ll.insert_before(6,'value')
-    # ll.insert_after(6,'value')
-    print(ll.insert_after(6,'value'))
+    ll.insert(4)
+    ll.insert(5)
+    print(ll.index_from_end(0))
