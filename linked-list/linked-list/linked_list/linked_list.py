@@ -77,11 +77,37 @@ class LinkedList:
         except IndexError:
             return ('index not valid')
 
+    def zip_linked_lists(ll1,ll2):
+        try:
+            current1 = ll1.head
+            current2 = ll2.head
+            if current1 == None or current2 == None:
+                raise ValueError
+            save_next2= current2.next
+            old_next1 = None
+            while current1.next:
+                old_next1 = current1.next
+                current1.next = current2
+                current2.next = old_next1
+                if save_next2 == None:
+                    break
+                if current1.next:
+                    current1 = current1.next.next
+                current2 = save_next2
+                save_next2=save_next2.next
+            if current1.next == None:
+                current1.next = current2
+        except ValueError:
+            return "empty linked lists are not valid function arguments"
+
+
 if __name__ == '__main__':
     ll=LinkedList()
     ll.insert(1)
     ll.insert(2)
     ll.insert(3)
-    ll.insert(4)
-    ll.insert(5)
-    print(ll.index_from_end(0))
+    ll2 = LinkedList()
+    ll2.insert('a')
+    ll2.insert('b')
+    ll2.insert('c')
+    LinkedList.zip_linked_lists(ll,ll2)

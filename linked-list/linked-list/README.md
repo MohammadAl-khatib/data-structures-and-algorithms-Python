@@ -38,3 +38,18 @@ Loop was used without nesting ->  o(n) Big O
 
 ## Solution
 Tests are embded within repo
+
+# Challenge Summary 08
+Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+
+## Whiteboard Process
+[white board link](https://webwhiteboard.com/board/XhQ7PZTM2F3EZmgE1Q63GjOZ09QpDPVp/)
+
+![white board](linked_list/assets/challenge08.png)
+
+## Approach & Efficiency
+Loop was used without nesting ->  o(n) Big O
+space --> O(1)
+
+## Solution
+Tests are embded within repo
