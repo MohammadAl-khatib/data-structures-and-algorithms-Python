@@ -1,3 +1,4 @@
+import linked_list
 import pytest
 from linked_list import __version__
 from linked_list.linked_list import LinkedList
@@ -107,7 +108,55 @@ def test_index_from_end_single_value_ll():
     expected = 1
     actual = ll.index_from_end(0)
     assert expected == actual 
-    
+
+def test_zip_same_length(ll,ll2):
+    expected = '{1} -> {a} -> {2} -> {b} -> {3} -> {c} -> None'
+    LinkedList.zip_linked_lists(ll,ll2)
+    actual = ll.__str__()
+    assert expected == actual
+
+def test_zip_first_shorter(ll2):
+    ll = LinkedList()
+    ll.insert(1)
+    expected = '{1} -> {a} -> {b} -> {c} -> None'
+    LinkedList.zip_linked_lists(ll,ll2)
+    actual = ll.__str__()
+    assert expected == actual
+
+def test_zip_second_shorter(ll):
+    ll2 = LinkedList()
+    ll2.insert('a')
+    expected = '{1} -> {a} -> {2} -> {3} -> None'
+    LinkedList.zip_linked_lists(ll,ll2)
+    actual = ll.__str__()
+    assert expected == actual
+
+def test_zip_one_element_each():
+    ll = LinkedList()
+    ll.insert('1')
+    ll2 = LinkedList()
+    ll2.insert('a')
+    expected = '{1} -> {a} -> None'
+    LinkedList.zip_linked_lists(ll,ll2)
+    actual = ll.__str__()
+    assert expected == actual
+
+def test_zip_empty_linked_lists_first():
+    ll = LinkedList()
+    ll2 = LinkedList()
+    ll2.insert('a')
+    expected = 'empty linked lists are not valid function arguments'
+    actual = LinkedList.zip_linked_lists(ll,ll2)
+    assert expected == actual
+
+def test_zip_empty_linked_lists_second():
+    ll = LinkedList()
+    ll.insert('a')
+    ll2 = LinkedList()
+    expected = 'empty linked lists are not valid function arguments'
+    actual = LinkedList.zip_linked_lists(ll,ll2)
+    assert expected == actual
+
 @pytest.fixture
 def ll():
     ll=LinkedList()
@@ -115,3 +164,10 @@ def ll():
     ll.insert(2)
     ll.insert(3)
     return ll
+@pytest.fixture
+def ll2():
+    ll2=LinkedList()
+    ll2.insert('a')
+    ll2.insert('b')
+    ll2.insert('c')
+    return ll2
