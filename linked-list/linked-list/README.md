@@ -31,7 +31,7 @@ Find the value for element according to its index from the end
 ## Whiteboard Process
 [white board link](https://webwhiteboard.com/board/neNFHaVZdrACDsJiemaCqMtlFOxmzi3C/)
 
-![white board](linked_list/assets/challenge07.png)
+![white board](linked_list/assets/challenge07new.png)
 
 ## Approach & Efficiency
 Loop was used without nesting ->  o(n) Big O
