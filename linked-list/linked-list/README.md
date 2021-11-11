@@ -12,11 +12,11 @@ For adding to a linked list, loops were used (without nesting), this results in 
 ## API
 No APIs till now
 
-# Challenge Summary
+# Challenge 06 Summary
 Insert before and after a node in a linked list
 
 ## Whiteboard Process
-N/A
+![challenge06](linked_list\challenge06.png)
 
 ## Approach & Efficiency
 Loops without nesting were used, resulted in a O(n) Big O

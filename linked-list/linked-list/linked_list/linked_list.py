@@ -65,6 +65,16 @@ class LinkedList:
             current = current.next
         if current == None:
             return f"{value} is not on the linked list"
+
+    def append(self,value):
+        node = Node(value)
+        if not self.head:
+            self.head = node
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = node
         
 
 if __name__ == '__main__':

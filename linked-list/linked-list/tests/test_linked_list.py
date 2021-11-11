@@ -81,6 +81,12 @@ def test_insert_after_value_not_in_list(ll):
     actual = ll.insert_after(8,'any value')
     assert expected == actual
 
+def test_append(ll):
+    ll.append('appended value')
+    expected = '{1} -> {2} -> {3} -> {appended value} -> None'
+    actual = ll.__str__()
+    assert expected == actual
+
 
 @pytest.fixture
 def ll():
