@@ -13,3 +13,16 @@ O(1) for all methods, they all check one node, reassign it, or remove it.
 
 ## API
 N/A
+
+# Challenge Summary
+Create a new class called pseudo queue that uses 2 stacks to produce a queue
+
+## Whiteboard Process
+[challenge11 whiteboard](https://webwhiteboard.com/board/LxE55TurXZVLvPwZDHUM79WS8uH5NR2r/)
+![challenge11](assets/challenge11.png)
+
+## Approach & Efficiency
+I needed to reach every stack element, so I used loops, this resulted in a big O of n
+
+## Solution
+Tests are provided
