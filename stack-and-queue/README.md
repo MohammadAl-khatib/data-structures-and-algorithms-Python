@@ -26,3 +26,14 @@ I needed to reach every stack element, so I used loops, this resulted in a big O
 
 ## Solution
 Tests are provided
+
+# Challenge 12 Summary
+Create a class that accepts two animals (dog, cat) and make a queue from them
+## Whiteboard Process
+![challenge11](assets/challenge12.png)
+
+## Approach & Efficiency
+The use of queues resulted in O(1)
+
+## Solution
+tests are provided
