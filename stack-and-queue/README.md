@@ -37,3 +37,13 @@ The use of queues resulted in O(1)
 
 ## Solution
 tests are provided
+
+# Challenge 13 Summary
+check if brackets are in a valid brackets format
+## Whiteboard Process
+![challenge11](assets/challenge13.png)
+## Approach & Efficiency
+Loops were used to check and store data, resulted in a Big O of N
+
+## Solution
+Tests are provided
