@@ -3,14 +3,14 @@ from stack_and_queue.stack import Stack
 def validate_brackets(input):
     try:
         if input == '': return 'invalid input'
-        save_open = []
+        save_open = Stack()
         save_close =''
         success = [['(',')'], ['[',']'], ['{','}']]
 
         for char in input:
             if char == '(' or char == '[' or char == '{' :
-                    save_open.append(char)
-            if char == ')' or char == ']' or char == '}' and len(save_open)>0 :
+                    save_open.push(char)
+            if char == ')' or char == ']' or char == '}' :
                 save_close = char
                 result = [save_open.pop(),save_close]
                 if result not in success:
