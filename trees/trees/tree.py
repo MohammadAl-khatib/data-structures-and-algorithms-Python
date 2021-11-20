@@ -113,12 +113,12 @@ class BST(Binary_Tree):
         
 
 tree=Binary_Tree()
-# tree.root=Node("A")
-# tree.root.left=Node("B")
-# tree.root.right=Node("C")
-# tree.root.left.left=Node("D")
-# tree.root.left.right=Node("E")
-# tree.root.right.left=Node("F")
+tree.root=Node("A")
+tree.root.left=Node("B")
+tree.root.right=Node("C")
+tree.root.left.left=Node("D")
+tree.root.left.right=Node("E")
+tree.root.right.left=Node("F")
 
 bst = BST()
 bst.add(23)
@@ -137,6 +137,6 @@ new_bst.add(20)
 print (bst.pre_order())
 print  (new_bst.contains(20))
 
-# print (tree.pre_order())
-# print (tree.in_order())
-# print (tree.post_order())
+print (tree.pre_order())
+print (tree.in_order())
+print (tree.post_order())
