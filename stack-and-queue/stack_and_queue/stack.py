@@ -1,4 +1,4 @@
-from stack_and_queue.node import Node
+from node import Node
 
 class Stack:
 
@@ -32,4 +32,24 @@ class Stack:
     
     def is_empty(self):
         return self.top == None
+
+def get_max(stack):
+    if stack.top == None : return 'stack is empty'
+    max = stack.top.value
+    current = stack.top
+    while current:
+        if current.value > max:
+            max = current.value
+        current = current.next
+    return max
+
+stack  = Stack()
+# stack.push(1)
+# stack.push(20)
+# stack.push(-10)
+# stack.push(13)
+# stack.push(4)
+
+print (get_max(stack))
+
     

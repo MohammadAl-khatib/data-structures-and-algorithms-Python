@@ -7,3 +7,6 @@ Challenge02 | [Link2](https://github.com/MohammadAl-khatib/data-structures-and-a
 Challenge03 | [Link3](binary-search/README.md)
 Challenge06 | [Link 6](linked-list/linked-list/README.md)
 Challenge07 | [Link 7](linked-list/linked-list/README.md)
+Challenge10 | [Link 10](stack-and-queue/README.md)
+Challenge11 | [Link 11](stack-and-queue/README.md)
+Challenge13 | [Link 13](stack-and-queue/README.md)
