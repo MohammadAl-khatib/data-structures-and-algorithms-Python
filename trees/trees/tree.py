@@ -59,11 +59,9 @@ class Binary_Tree:
         _traverse()
         return self.result
 
-class BST(Binary_Tree):
-    def __init__(self):
-        self.root = None
-
     def breadth(self):
+        if not self.root.value:
+            return 'Tree is empty'
         queue = Queue()
         output = []
         queue.enqueue(self.root)
@@ -77,7 +75,11 @@ class BST(Binary_Tree):
                 queue.enqueue(node.right)
 
         return output
-    
+
+class BST(Binary_Tree):
+    def __init__(self):
+        self.root = None
+
     def add(self,value):
         if not self.root : 
             self.root = Node(value)
@@ -125,7 +127,7 @@ class BST(Binary_Tree):
         
 
         
-if __name__ == '__main':     
+if __name__ == '__main__':     
 
     tree=Binary_Tree()
     tree.root=Node("A")
@@ -145,17 +147,4 @@ if __name__ == '__main':
     bst.add(85)
     bst.add(15)
 
-    new_bst = BST()
-    new_bst.add(20)
-
-
-    print (bst.pre_order())
-    print  (new_bst.contains(20))
-
-    print (tree.pre_order())
-    print (tree.in_order())
-    print (tree.post_order())
-    print (tree.max())
-    print (bst.max())
-    new_tree = Binary_Tree()
-    print (new_tree.max())
+    print (tree.breadth())

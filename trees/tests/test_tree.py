@@ -141,6 +141,24 @@ def test_max_empty_tree():
     actual = new_tree.max()
     assert expected == actual
 
+def test_breadth(tree):
+    expected = ['A', 'B', 'C', 'D', 'E', 'F']
+    actual= tree.breadth()
+    assert expected == actual
+
+
+def test_breadth_one_node():
+    tree = Binary_Tree('A')
+    expected = ['A']
+    actual= tree.breadth()
+    assert expected == actual
+
+def test_breadth_empty_tree():
+    tree = Binary_Tree()
+    expected = 'Tree is empty'
+    actual= tree.breadth()
+    assert expected == actual
+
 
 @pytest.fixture
 def tree():

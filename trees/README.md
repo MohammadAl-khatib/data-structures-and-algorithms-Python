@@ -11,6 +11,7 @@ Also, the challenge requires the creation of a subclass for the binary tree clas
 ## Approach & Efficiency
 Loops (without nesting) and recursions were used to traverse trees, resulting in a Big O of n
 
+
 # Challenge 16 Summary
 Find max of a tree
 
@@ -19,4 +20,13 @@ Find max of a tree
 
 ## Approach & Efficiency
 Recursion used resulted in a big o of n
+
+# Challenge 17 Summary
+Dispaly a queue using breadth first approach
+
+## Whiteboard Process
+![CC17](trees/CC17.png)
+## Approach & Efficiency
+A loop was used to traverse and store values resulted in a big o of n
+
 
