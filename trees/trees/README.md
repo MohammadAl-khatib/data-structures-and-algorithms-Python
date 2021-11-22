@@ -15,7 +15,7 @@ Loops (without nesting) and recursions were used to traverse trees, resulting in
 Find max of a tree
 
 ## Whiteboard Process
-![CC16](trees/CC16.png)
+![CC16](CC16.png)
 
 ## Approach & Efficiency
 Recursion used resulted in a big o of n
