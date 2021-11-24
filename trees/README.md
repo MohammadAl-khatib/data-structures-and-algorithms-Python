@@ -20,3 +20,13 @@ Find max of a tree
 ## Approach & Efficiency
 Recursion used resulted in a big o of n
 
+# Challenge 18 Summary
+Convert a tree values to their equivalent fizz buzz values
+## Whiteboard Process
+![CC18]('trees/CC18.png')
+
+## Approach & Efficiency
+Nested while loops resulted in a big o of N^2 for time and o of n for space
+
+
+
