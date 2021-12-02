@@ -141,11 +141,20 @@ def test_max_empty_tree():
     actual = new_tree.max()
     assert expected == actual
 
-def test_breadth(tree):
+def test_breadth(tree2):
+    expected = ['1', '10', '15', '2', '1', '-6']
+    actual= tree2.breadth()
+    assert expected == actual
+
+def test_breadth2(tree):
     expected = ['A', 'B', 'C', 'D', 'E', 'F']
     actual= tree.breadth()
     assert expected == actual
 
+def test_breadth3(tree3):
+    expected = ['A', 'B', 'k', 'Hello', 15, None]
+    actual= tree3.breadth()
+    assert expected == actual
 
 def test_breadth_one_node():
     tree = Binary_Tree('A')
@@ -169,6 +178,26 @@ def tree():
     tree.root.left.right=Node("E")
     tree.root.right.left=Node("F")
     return tree
+
+@pytest.fixture
+def tree2():
+    tree2 = Binary_Tree('1')
+    tree2.root.left=Node("10")
+    tree2.root.right=Node("15")
+    tree2.root.left.left=Node("2")
+    tree2.root.left.right=Node("1")
+    tree2.root.right.left=Node("-6")
+    return tree2
+
+@pytest.fixture
+def tree3():
+    tree3 = Binary_Tree('A')
+    tree3.root.left=Node("B")
+    tree3.root.right=Node("k")
+    tree3.root.left.left=Node("Hello")
+    tree3.root.left.right=Node(15)
+    tree3.root.right.left=Node(None)
+    return tree3
 
 @pytest.fixture
 def bst():
