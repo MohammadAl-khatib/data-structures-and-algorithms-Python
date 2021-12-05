@@ -1,0 +1,12 @@
+def insertion_sort(arr):
+    for i in range (1, len(arr)):
+        j = i-1
+        temp = arr[i]
+        if not type (temp) == int and not type (temp) == float:
+            return 'Only numbers are allowed'
+
+        while j >=0 and temp < arr[j]:
+            arr[j + 1] = arr[j]
+            j = j - 1
+        arr[j + 1] = temp
+    return arr
