@@ -5,4 +5,4 @@ Sort array elements an ascending order using merge sort
 ![CC27](assets/CC27.png)
 
 ## Approach & Efficiency
-A while loop was used inside a recursive function, resulted in a big o of N^2 for time, and a bigo of n for space
+A while loop was used inside a recursive function, resulted in a big o of N^2 for time, and a bigo of n for space because space created is equal to list length in worst case
