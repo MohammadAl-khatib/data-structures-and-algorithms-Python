@@ -1,4 +1,5 @@
 from .linked_list import LinkedList
+import re
 
 class Hashtable():
     def __init__(self, size = 1024):
@@ -36,3 +37,15 @@ class Hashtable():
             current = current.next
         else:
             return False
+
+            
+def repeated_word(text):
+    store_text = Hashtable()
+    
+    for char in text.split(' '):            
+        if store_text.contains(char):
+            return char
+        store_text.add(char.split(',')[0].lower(), char.lower())
+        
+    return 'No repeated word'
+
