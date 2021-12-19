@@ -8,6 +8,7 @@ Time: O(n*h) where h is the max number of neighbors a node might have
 
 ## Solution
 A function takes a graph and a starter vertex as arguments and returns a list of node values
+![breadth first traversal](graph/BFS.png)
 
 ## Requirements
 
