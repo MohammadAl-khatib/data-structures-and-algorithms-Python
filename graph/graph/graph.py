@@ -123,13 +123,28 @@ class Graph:
         return result
 
 
+def business_trip(graph, list):
+    sum = 0
+    for i in range (len(list)-1):
+        result = 0
+        for edge in graph.get_neighbors(list[i]):
+            if edge.vertex == list[i+1]:
+                result = edge.weight
+                sum += result
+        if result == 0:
+            return None
+    return sum
+
+
 
 graph = Graph()
 vertex1 = graph.add_node(1)
 vertex2 = graph.add_node(2)
 vertex3 = graph.add_node(3)
 vertex4 = graph.add_node(4)
-graph.add_edge(vertex1, vertex2)
-graph.add_edge(vertex2, vertex3)
-graph.add_edge(vertex1, vertex4)
+graph.add_edge(vertex1, vertex2, 20)
+graph.add_edge(vertex2, vertex3, 50)
+graph.add_edge(vertex3, vertex4, 35)
+list = [vertex1, vertex2, vertex3, vertex4]
 
+print(business_trip(graph, list))
