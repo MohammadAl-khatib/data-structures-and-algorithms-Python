@@ -1,5 +1,5 @@
 from collections import deque
-
+from .stack import Stack
 
 class Queue:
     def __init__(self):
@@ -99,6 +99,29 @@ class Graph:
         """
         return len(self.__adj_list)
     
+    def dfs(self, start_vertex):
+        stack = Stack()
+        result = []
+        visited = set()
+
+        stack.push(start_vertex)
+        visited.add(start_vertex)
+        result.append(start_vertex.value)
+
+        while stack.peek():
+            current_vertex = stack.pop()
+            neighbors = self.get_neighbors(current_vertex)
+
+            for edge in neighbors:
+                neighbor = edge.vertex
+
+                if neighbor not in visited:
+                    stack.push(neighbor)
+                    visited.add(neighbor)
+                    result.append(neighbor.value)
+
+        return result
+
     def bfs(self, start_vertex):
         queue = Queue()
         result = []
@@ -111,7 +134,7 @@ class Graph:
         while len(queue):
             current_vertex = queue.dequeue()
             neighbors = self.get_neighbors(current_vertex)
-
+    
             for edge in neighbors:
                 neighbor = edge.vertex
 
@@ -138,13 +161,31 @@ def business_trip(graph, list):
 
 
 graph = Graph()
-vertex1 = graph.add_node(1)
-vertex2 = graph.add_node(2)
-vertex3 = graph.add_node(3)
-vertex4 = graph.add_node(4)
-graph.add_edge(vertex1, vertex2, 20)
-graph.add_edge(vertex2, vertex3, 50)
-graph.add_edge(vertex3, vertex4, 35)
-list = [vertex1, vertex2, vertex3, vertex4]
+vertex1 = graph.add_node('A')
+vertex2 = graph.add_node('B')
+vertex3 = graph.add_node('C')
+vertex4 = graph.add_node('D')
+vertex5 = graph.add_node('E')
+vertex6 = graph.add_node('F')
+vertex7 = graph.add_node('G')
+vertex8 = graph.add_node('H')
 
-print(business_trip(graph, list))
+graph.add_edge(vertex1, vertex2)
+graph.add_edge(vertex1, vertex3)
+graph.add_edge(vertex2, vertex4)
+graph.add_edge(vertex2, vertex3)
+graph.add_edge(vertex2, vertex1)
+graph.add_edge(vertex4, vertex1)
+graph.add_edge(vertex4, vertex5)
+graph.add_edge(vertex4, vertex8)
+graph.add_edge(vertex4, vertex6)
+graph.add_edge(vertex4, vertex2)
+graph.add_edge(vertex6, vertex8)
+graph.add_edge(vertex6, vertex4)
+graph.add_edge(vertex8, vertex4)
+graph.add_edge(vertex8, vertex6)
+graph.add_edge(vertex5, vertex4)
+graph.add_edge(vertex3, vertex2)
+graph.add_edge(vertex3, vertex7)
+graph.add_edge(vertex7, vertex3)
+print(graph.dfs(vertex1))
