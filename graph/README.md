@@ -1,15 +1,13 @@
-## Challenge
-Use breadth first traversal to traverse a graph
+# Challenge Summary
+Check if a direct trip destinations is possible, and return the cost if so
+The cities are represented as a graph
+
+## Whiteboard Process
+![buisness](graph/buisness.png)
 
 ## Approach & Efficiency
-Space : O(n)  every node is saved in the list
-
-Time: O(n*h) where h is the max number of neighbors a node might have
+Space: O (N), a variable was created inside a loop
+Time: O(N*h) where N is the length of the list and H is the max number of neighbors of a vertex
 
 ## Solution
-A function takes a graph and a starter vertex as arguments and returns a list of node values
-![breadth first traversal](graph/BFS.png)
-
-## Requirements
-
-A predefined class for creating a grapgh and methods to add vertexes and edges; and to get neighbors
+The function takes a graph and a list as arguments and returns the cost as integer
