@@ -1,13 +1,13 @@
-# Challenge Summary
-Check if a direct trip destinations is possible, and return the cost if so
-The cities are represented as a graph
+# Depth First Traversal
+Traverse a graph from leaves to roots
 
-## Whiteboard Process
-![buisness](graph/buisness.png)
+## Challenge
+Traverse a graph using depth first approach
 
 ## Approach & Efficiency
-Space: O (N), a variable was created inside a loop
-Time: O(N*h) where N is the length of the list and H is the max number of neighbors of a vertex
+Space: O (n)  for creating a list the same length as graph
+Time: O (N*H) where H is the max number of neibors
 
 ## Solution
-The function takes a graph and a list as arguments and returns the cost as integer
+![dfs](graph/dfs.png)
+
